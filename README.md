@@ -33,12 +33,20 @@ Complete MERN stack eCommerce project 2023.
    cd ecommerce-app-2023
 
 ### Screenshot 
-- `./screenshots/homepage.png`
-- `./screenshots/products.png`
-- `./screenshots/productdetails.png`
-- `./screenshots/login.png`
-- `./screenshots/register.png`
-- `./screenshots/cart.png`
-- `./screenshots/admindashboard.png`
-- `./screenshots/createproduct.png`
+### Home Page
+![Home Page](screenshots/homepage.png)
+### Home Page
+![Products Page](screenshots/products.png)
+### Product Details Page
+![Product_Details Page](screenshots/productdetails.png)
+### Login Page
+![Login Page](screenshots/login.png)
+### Register Page
+![Register Page](screenshots/register.png)
+### Cart Page
+![Cart Page](screenshots/cart.png)
+### Admin Page
+![Dashboard Page](screenshots/admindashboard.png)
+### Dashboard Page
+![Dashboard Page](screenshots/createproduct.png)
 
