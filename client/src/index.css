@@ -6,22 +6,38 @@
     box-sizing: border-box;
 }
 
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'Playfair Display', serif; */
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
 
-/* navbar  */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Navbar styles */
 .navbar {
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
     line-height: 26px;
     text-transform: uppercase;
     box-shadow: 0 8px 6px -6px gray;
-    --webkit-box-shadow: 0 8px 6px -6px gray;
     border-bottom: solid gray !important;
 }
 
 .nav-link {
-    font-weight: 300 impr !important;
+    font-weight: 300 !important;
 }
 
 .active {
@@ -30,19 +46,19 @@
 
 .navbar-brand {
     font-weight: 700;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 3px;
     color: green;
 }
 
+/* Footer styles */
 .footer {
     color: white;
-    padding: 25px;
+    padding: 20px 0;
     background: green;
-    background: --webkit-box-shado(to right,
-            #434343,
-            #000000);
     background: linear-gradient(to right, #434343, #000000);
+    margin-top: auto;
+    text-align: center;
 }
 
 .footer a {
@@ -56,7 +72,7 @@
     border-bottom: 1px solid #ffefba;
 }
 
-/* ---------page not found---------------- */
+/* Page not found styles */
 .pnf {
     display: flex;
     min-height: 65vh;
@@ -82,7 +98,7 @@
     margin-top: 10px;
 }
 
-/* --------contact us--------- */
+/* Contact us styles */
 .contactus {
     margin: 0;
     padding: 0;
@@ -92,16 +108,8 @@
     justify-content: center;
 }
 
-/* --------register page--------------- */
-/* .register {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    flex-direction: column;
-} */
-
-.product-link{
-    text-decoration: none ! important;
-    color: black ! important;
+/* Product link styles */
+.product-link {
+    text-decoration: none !important;
+    color: black !important;
 }

@@ -10,21 +10,54 @@
 .home-page {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
+
 .home-page .card {
   background-color: rgba(128, 128, 128, 0.097);
-  width: 18rem;
+  width: 100%;
+  max-width: 18rem;
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px); /* Adjust to 3 cards per row */
 }
+
+@media (max-width: 992px) {
+  .home-page .card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .card {
+    flex: 1 1 calc(100% - 20px);
+    /* Adjust to 1 card per row on small screens */
+  }
+}
+
 .home-page .card-name-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.home-page .card-details .ct{
+  color: rgb(39, 160, 70);
+}
+
+.home-page .card-details .carda .cardb .card-body .card-name-price .btm {
+  background-color: rgb(39, 160, 70);
+}
+
+.home-page .card-details .carda .cardb .card-body .card-name-price .btc {
+  background-color: rgb(133, 171, 46);
+}
+
 .home-page .card-price {
   color: green;
   font-weight: bold;
 }
+
 .home-page button {
   border-radius: 0;
   width: 100%;
@@ -45,6 +78,7 @@
 .home-page .card-img-top {
   height: 300px !important;
 }
+
 /* ==================
   filters
   ============== */
@@ -61,17 +95,25 @@
 .ant-checkbox-wrapper {
   margin: 2px;
 }
+
 .ant-radio-wrapper {
   margin-bottom: 5px !important;
   margin-left: 10px;
 }
 
 .filters button {
-  background-color: black;
-  width: 100%;
+  background-color: rgba(223, 216, 205, 0.971);
+  width: 80%;
   border: none;
   border-radius: 0;
   margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 60px;
+  margin-bottom: 10px;
+}
+
+.filters button:hover{
+  background-color: rgba(192, 178, 157, 0.971);
 }
 
 .loadmore {

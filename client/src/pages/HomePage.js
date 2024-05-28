@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Checkbox, Radio } from "antd";
-import { Prices } from "../components/Prices";
+// import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -116,7 +116,7 @@ const HomePage = () => {
                 width={"100%"}
             />
             {/* filter by category */}
-            <div className="container-fluid row mt-3 home-page">
+            <div className="container-fluid row home-page">
                 <div className="col-md-3 filters">
                     <h4 className="text-center">Filter By Category</h4>
                     <div className="d-flex flex-column">
@@ -130,7 +130,7 @@ const HomePage = () => {
                         ))}
                     </div>
                     {/* price filter */}
-                    <h4 className="text-center mt-4">Filter By Price</h4>
+                    {/* <h4 className="text-center mt-4">Filter By Price</h4>
                     <div className="d-flex flex-column">
                         <Radio.Group onChange={(e) => setRadio(e.target.value)}>
                             {Prices?.map((p) => (
@@ -139,21 +139,21 @@ const HomePage = () => {
                                 </div>
                             ))}
                         </Radio.Group>
-                    </div>
+                    </div> */}
                     <div className="d-flex flex-column">
                         <button
-                            className="btn btn-danger"
+                            className="btn"
                             onClick={() => window.location.reload()}
                         >
                             RESET FILTERS
                         </button>
                     </div>
                 </div>
-                <div className="col-md-9 ">
-                    <h1 className="text-center">All Products</h1>
-                    <div className="d-flex flex-wrap">
+                <div className="col-md-9 card-details">
+                    <h1 className="text-center ct">All Products</h1>
+                    <div className="d-flex flex-wrap carda">
                         {products?.map((p) => (
-                            <div className="card m-2" key={p._id}>
+                            <div className="card m-2 cardb" key={p._id}>
                                 <img
                                     src={`/api/v1/product/product-photo/${p._id}`}
                                     className="card-img-top"
@@ -172,13 +172,13 @@ const HomePage = () => {
                                     </p>
                                     <div className="card-name-price">
                                         <button
-                                            className="btn btn-info ms-1"
+                                            className="btn ms-1 btm"
                                             onClick={() => navigate(`/product/${p.slug}`)}
                                         >
                                             More Details
                                         </button>
                                         <button
-                                            className="btn btn-dark ms-1"
+                                            className="btn ms-1 btc"
                                             onClick={() => {
                                                 setCart([...cart, p]);
                                                 localStorage.setItem(
