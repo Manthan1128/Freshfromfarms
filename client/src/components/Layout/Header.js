@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useCart } from '../../context/cart.js';
 import { NavLink, Link } from 'react-router-dom';
 import { GiFruitBowl } from 'react-icons/gi';
 import { UseAuth } from '../../context/auth';
 import { toast } from "react-toastify";
-import useCategory from '../../hooks/useCategory.js';
 import { Badge } from 'antd';
 
 const Header = () => {
   const [auth, setAuth] = UseAuth();
   const [cart] = useCart();
-  const categories = useCategory();
   const handleLogout = () => {
     setAuth({
       ...auth,

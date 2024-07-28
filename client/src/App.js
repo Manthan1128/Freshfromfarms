@@ -6,7 +6,6 @@ import Policy from './pages/Policy';
 import Pagenotfound from './pages/Pagenotfound';
 import Register from './pages/Auth/Register';
 import Login from './pages/Auth/Login';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './pages/user/Dashboard';
 import PrivateRoute from './components/Routes/Private';

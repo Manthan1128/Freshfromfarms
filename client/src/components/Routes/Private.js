@@ -6,7 +6,7 @@ import Spinner from "../Spinner";
 
 export default function PrivateRoute() {
     const [ok, setOk] = useState(false);
-    const [auth, setAuth] = UseAuth();
+    const [auth] = UseAuth();
     useEffect(() => {
         const authCheck = async () => {
             const res = await axios.get('/api/v1/auth/user-auth')
