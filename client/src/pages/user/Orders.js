@@ -7,7 +7,7 @@ import moment from "moment";
 
 const Orders = () => {
     const [orders, setOrders] = useState([]);
-    const [auth, setAuth] = UseAuth();
+    const [auth] = UseAuth();
     const getOrders = async () => {
         try {
             const { data } = await axios.get("/api/v1/auth/orders");
