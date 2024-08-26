@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "https://freshfromfarms.onrender.com",
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@testing-library/jest-dom": "^5.16.5",
