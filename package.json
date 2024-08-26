@@ -18,7 +18,7 @@
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^6.2.0",
@@ -31,8 +31,8 @@
   },
   "devDependencies": {
     "http-server": "^14.1.1",
-    "sleep-ms": "^2.0.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "sleep-ms": "^2.0.1"
   },
   "keywords": [],
   "author": "",
