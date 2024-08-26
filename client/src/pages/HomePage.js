@@ -19,11 +19,12 @@ const HomePage = () => {
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
+    const apiUrl = process.env.REACT_APP_API_URL || 'https://freshfromfarms.onrender.com';
 
     //get all cat
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("/api/v1/category/get-category");
+            const { data } = await axios.get(`${apiUrl}/api/v1/category/get-category`);
             if (data?.success) {
                 setCategories(data?.category);
             }
@@ -40,7 +41,7 @@ const HomePage = () => {
     const getAllProducts = async () => {
         try {
             setLoading(true);
-            const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+            const { data } = await axios.get(`${apiUrl}/api/v1/product/product-list/${page}`);
             setLoading(false);
             setProducts(data.products);
         } catch (error) {

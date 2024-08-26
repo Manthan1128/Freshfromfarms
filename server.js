@@ -19,10 +19,14 @@ connectDB();
 const app = express();
 
 //middlewares
-app.use(cors());
+// app.use(cors());
 app.use(cors({
-    origin: 'https://freshfromfarms.vercel.app/', // Replace with your Vercel domain
+    origin: 'https://freshfromfarms.vercel.app', // Your Vercel frontend URL
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true, // Allow credentials like cookies
+    allowedHeaders: 'Content-Type,Authorization' // Add any other headers you need to allow
 }));
+
 app.use(express.json());
 app.use(morgan('dev'));
 
